@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: #0b0d12;
+  color: #f4f5f8;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 40px 32px;
+  gap: 24px;
+}
+
+.app__header h1 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.app__header p {
+  color: #b7bdcc;
+}
+
+.app__content {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+  gap: 32px;
+}
+
+.panel {
+  background: #151821;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel h2 {
+  font-size: 1.3rem;
+}
+
+.draw-canvas {
+  border-radius: 12px;
+  border: 1px solid #2a3140;
+  background: #0f1115;
+  cursor: crosshair;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #2a3140;
+  color: #f4f5f8;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.primary {
+  background: #5a8bff;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.status {
+  color: #a7adba;
+}
+
+.prediction {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.prediction__label {
+  color: #b7bdcc;
+}
+
+.prediction__value {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.probabilities {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.probability {
+  display: grid;
+  grid-template-columns: 24px 1fr 64px;
+  align-items: center;
+  gap: 12px;
+}
+
+.probability__digit {
+  font-weight: 600;
+}
+
+.probability__bar {
+  background: #0f1115;
+  border-radius: 999px;
+  overflow: hidden;
+  height: 12px;
+}
+
+.probability__fill {
+  height: 100%;
+  background: linear-gradient(90deg, #5a8bff, #9b6bff);
+}
+
+.probability__value {
+  text-align: right;
+  color: #b7bdcc;
+  font-variant-numeric: tabular-nums;
+}
+
+.app__footer {
+  color: #6c7282;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .app__content {
+    grid-template-columns: 1fr;
+  }
+}
