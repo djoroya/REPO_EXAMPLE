@@ -1,14 +1,27 @@
 # Handwritten Digits Neural Network Demo
 
-This repository contains a small, beginner-friendly Jupyter Notebook that trains a simple neural network on scikit-learn's built-in digits dataset.
+Este repositorio ahora incluye una interfaz gráfica para dibujar dígitos y obtener predicciones del modelo entrenado con el dataset de dígitos de scikit-learn.
 
-## How to run
-1. Install dependencies (scikit-learn and matplotlib). These are often included in common Python environments. If needed, install them with:
+## Instalación
+1. Ejecuta el script de instalación que crea el entorno conda (Python 3.9) e instala dependencias del frontend:
+   ```bash
+   ./install.sh
+   ```
+
+## Inicio rápido
+1. Inicia backend y frontend con un solo comando:
+   ```bash
+   ./start.sh
+   ```
+2. Abre el navegador en `http://localhost:5173` para usar la interfaz.
+
+## Notebook original
+Si deseas revisar el notebook original:
+1. Instala dependencias básicas:
    ```bash
    pip install scikit-learn matplotlib
    ```
-2. Open the notebook:
+2. Abre el notebook:
    ```bash
    jupyter notebook digits_mlp_demo.ipynb
    ```
-3. Run the cells from top to bottom to load the data, visualize sample digits, train the model, and view predictions.

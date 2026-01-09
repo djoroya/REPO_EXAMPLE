@@ -1,0 +1,121 @@
+:root {
+  font-family: "Inter", system-ui, sans-serif;
+  color: #1f2933;
+  background-color: #f5f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.panel {
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+canvas {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  cursor: crosshair;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #2563eb;
+  color: #fff;
+}
+
+button.secondary {
+  background: #e2e8f0;
+  color: #1f2933;
+}
+
+.status {
+  margin-top: 12px;
+  color: #475569;
+}
+
+.prediction {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.prediction .label {
+  font-weight: 600;
+}
+
+.prediction .value {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+.probabilities {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prob-row {
+  display: grid;
+  grid-template-columns: 24px 1fr 64px;
+  align-items: center;
+  gap: 8px;
+}
+
+.bar {
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  height: 10px;
+}
+
+.bar .fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+
+.percent {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
