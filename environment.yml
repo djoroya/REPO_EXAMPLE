@@ -1,0 +1,11 @@
+name: digits-gui
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - flask
+  - flask-cors
+  - scikit-learn
+  - numpy
+  - joblib
+  - pip
